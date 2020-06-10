@@ -1,0 +1,16 @@
+---
+## Default Kibana configuration from Kibana base image.
+## https://github.com/elastic/kibana/blob/master/src/dev/build/tasks/os_packages/docker_generator/templates/kibana_yml.template.js
+#
+server.name: kibana
+server.host: "0"
+elasticsearch.hosts: [ "http://elasticsearch:9200" ]
+xpack.monitoring.ui.container.elasticsearch.enabled: true
+
+## X-Pack security credentials
+#
+elasticsearch.username: elastic
+elasticsearch.password: changeme
+
+# Should NOT be static in PROD, but it's ok in this setup
+xpack.security.encryptionKey: "h8SzT3ipaem8SkjAFcTrTdZjN7Gpp1LlLP4nqwwQ"
