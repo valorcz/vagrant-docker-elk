@@ -1,0 +1,22 @@
+version: '3.2'
+
+services:
+  elastalert:
+    build:
+      context: elastalert
+    volumes:
+      - type: bind
+        source: ./elastalert/config/config.yaml
+        target: /opt/elastalert/config.yaml
+        read_only: true
+      - type: bind
+        source: ./elastalert/rules/
+        target: /opt/elastalert/config/rules/
+        read_only: true
+    environment:
+      ELASTALERT_CREATE_INDEX: "true"
+    networks:
+      - elk
+    depends_on:
+      - elasticsearch
+    restart: on-failure
