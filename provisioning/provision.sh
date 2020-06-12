@@ -31,3 +31,10 @@ cp /vagrant/env ~/.env
 
 #sudo docker-compose -f "/vagrant/docker-elk/docker-compose.yml" up -d
 sudo docker-compose -f /vagrant/docker-elk/docker-compose.yml -f /vagrant/docker-elk/extensions/logspout/logspout-compose.yml up -d
+
+# Announce the URL where Splunk is available now
+echo "****************************************************************************"
+echo " Congratulations! Your Kibana instance is running at http://localhost:5601/"
+echo " Authenticate with elastic:changeme (username:password)"
+echo "****************************************************************************"
+
