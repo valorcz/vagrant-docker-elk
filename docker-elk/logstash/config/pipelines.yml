@@ -1,0 +1,14 @@
+# This file is where you define your pipelines. You can define multiple.
+# For more information on multiple pipelines, see the documentation:
+#   https://www.elastic.co/guide/en/logstash/current/multiple-pipelines.htm
+
+- pipeline.id: logspout
+  path.config: "/usr/share/logstash/pipeline/logstash.conf"
+  pipeline.workers: 3
+  queue.type: persisted
+- pipeline.id: sophos
+  path.config: "/usr/share/logstash/pipeline/sophos.conf"
+  queue.type: persisted
+- pipeline.id: sophos_raw
+  path.config: "/usr/share/logstash/pipeline/sophos-raw.conf"
+  queue.type: persisted
