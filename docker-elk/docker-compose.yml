@@ -41,6 +41,10 @@ services:
         target: /usr/share/logstash/config/pipelines.yml
         read_only: true
       - type: bind
+        source: ./logstash/patterns
+        target: /usr/share/logstash/patterns
+        read_only: true
+      - type: bind
         source: ./logstash/pipeline
         target: /usr/share/logstash/pipeline
         read_only: true

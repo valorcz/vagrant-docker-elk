@@ -1,0 +1,5 @@
+SOPHOS_MARK <28> ?
+SOPHOS_DEVICE [a-zA-Z0-9-]+
+SOPHOS_DATE (?:%{YEAR}[./-]%{MONTHNUM}[./-]%{MONTHDAY})
+SOPHOS_IDP %{SOPHOS_MARK}device=%{SOPHOS_DEVICE:device} date=%{SOPHOS_DATE:date} time=%{TIME:time} timezone=%{WORD:timezone} device_name=%{USERNAME:device_name} device_id=%{USERNAME:device_id} log_id=%{INT:log_id} log_type=%{WORD:log_type} log_component=%{WORD:log_component} log_subtype=%{WORD:log_subtype} status=%{WORD:status}? priority=%{WORD:priority} idp_policy_id=%{INT:idp_policy_id} fw_rule_id=%{INT:fw_rule_id} user_name=%{USERNAME:user_name}? signature_id=%{INT:signature_id} signature_msg=%{GREEDYDATA:signature_msg} classification=%{GREEDYDATA:classification} rule_priority=%{INT:rule_priority} src_ip=%{IP:src_ip} src_country_code=%{DATA:src_country_code} dst_ip=%{IP:dst_ip} dst_country_code=%{DATA:dst_country_code} protocol=%{WORD:protocol} src_port=%{INT:src_port} dst_port=%{INT:dst_port} platform=%{DATA:platform} category=%{GREEDYDATA:category} target=%{GREEDYDATA:target}
+

@@ -6,9 +6,12 @@
   path.config: "/usr/share/logstash/pipeline/logstash.conf"
   pipeline.workers: 3
   queue.type: persisted
+- pipeline.id: sophos-raw
+  path.config: "/usr/share/logstash/pipeline/sophos-raw.conf"
+  queue.type: persisted
 - pipeline.id: sophos-xg
   path.config: "/usr/share/logstash/pipeline/xg.conf"
   queue.type: persisted
-- pipeline.id: sophos-raw
-  path.config: "/usr/share/logstash/pipeline/sophos-raw.conf"
+- pipeline.id: sophos-xg-grok
+  path.config: "/usr/share/logstash/pipeline/xg-grok.conf"
   queue.type: persisted
