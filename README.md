@@ -1,4 +1,6 @@
-# Credits
+# Vagrant/Docker ELK
+
+## Credits
 
 Forked from [docker-elk][1] with ElastAlert
 container added. ElastAlert part has been taken from
@@ -7,7 +9,12 @@ container added. ElastAlert part has been taken from
 This project would take much longer to build without the two projects above,
 thanks!
 
-# Authentication
+## Customizations
+
+A few changes were implemented on top of the previous images, mostly
+configuration-wise.
+
+## Authentication
 
 Your Kibana instance will be running at [http://localhost:5601/][3]. Authenticate
 with `elastic`:`changeme` (username:password).

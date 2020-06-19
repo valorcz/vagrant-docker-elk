@@ -2,12 +2,12 @@
 
 Docker image with Elastalert on Alpine Linux.
 
-# Default volumes
+## Default volumes
 
 * /opt/elastalert       - Elastalert (config.yaml) configuration files.
 * /opt/elastalert/rules - Contains Elastalert rules.
 
-# Environment
+## Environment
 
 * ELASTALERT_DIR          - /opt/elastalert
 * ELASTALERT_CONFIG       - /opt/elastalert/config.yaml
