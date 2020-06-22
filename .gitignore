@@ -7,5 +7,5 @@
 .vagrant
 
 # Ignore data folder
-#data/
+data/
 
